@@ -1,0 +1,3 @@
+primaryColor = #fefaf8
+secondaryColor = #f6af8c
+spanColor = #ce9485
