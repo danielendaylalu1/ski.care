@@ -9,8 +9,12 @@ import { PiKeyReturnFill } from 'react-icons/pi';
 import { BiSupport } from 'react-icons/bi';
 
 import ladyOne from '../assets/images/lady1.webp';
-import ladyTwo from '../assets/images/lady2.webp';
 import medicineTwo from '../assets/images/medicine2.webp';
+
+import medicineLongOne from '../assets/images/medicinelong1.webp';
+import medicineLongTwo from '../assets/images/medicinelong2.png';
+import medicineMiniOne from '../assets/images/medicinemini1.png';
+import medicineMiniTwo from '../assets/images/medicinemini2.png';
 
 export default function Home() {
   const brandLinks = [
@@ -48,8 +52,32 @@ export default function Home() {
     'GET DISCOUNT UP 25 %',
     'GET DISCOUNT UP 25 %',
   ];
+  const sideText = [
+    'A',
+    '-',
+    'S',
+    'u',
+    'p',
+    'e',
+    'r',
+    'l',
+    'a',
+    't',
+    'i',
+    'v',
+    'e',
+    '-',
+    'S',
+    'e',
+    'l',
+    'c',
+    't',
+    'i',
+    'o',
+    'n',
+  ];
   return (
-    <main className="min-h-[90vh] flex justify-between items-center flex-col gap-y-8 py-6 text-center">
+    <main className="min-h-[90vh] flex justify-between items-center flex-col py-6 text-center">
       <section className="w-full flex justify-between items-center flex-col gap-y-8 p-6">
         <h1 className="text-[4rem] max-w-[800px]">
           Parsley Seed Anti-Oxidant Intense Serum
@@ -146,10 +174,166 @@ export default function Home() {
           alt="lady"
         />
       </section>
-      <section className="flex items-center justify-around w-full p-6 border-y border-black/50">
+      <section className="flex items-center justify-around w-full gap-x-4 p-6 border-y border-black/50">
         {discounts.map((item, i) => (
           <p key={i}>{item}</p>
         ))}
+      </section>
+      <section className="min-h-[90vh] flex w-full border-b border-black/50">
+        <div className="min-h-[90vh] flex w-[10%] justify-center min-w-[140px] border-r border-black/50">
+          <p className="text-5xl flex flex-col justify-center">
+            {sideText.reverse().map((l, i) => (
+              <span key={i} className="rotate-[270deg] -mt-5">
+                {l}
+              </span>
+            ))}
+          </p>
+        </div>
+        <div className="min-h-full flex flex-col w-[30%] border-r border-black/50">
+          <div className="flex flex-col items-center gap-y-4 w-full border-b border-black/50 p-4">
+            <Image
+              src={medicineTwo}
+              alt="medicine"
+              className="max-w-[350px] w-full"
+            />
+            <p className="text-lg max-w-[800px]">
+              AHAVA MINERAL BOTANIC VELVET BODY LOTION
+            </p>
+            <div className="rounded-full p-[2px] border border-black/50 scale-[0.7] text-center">
+              {' '}
+              <Link
+                href={'/'}
+                className="flex justify-center items-center bg-black text-white gap-x-4 py-3 px-6 rounded-full"
+              >
+                <span className="rounded-full p-[2px] border border-white/50">
+                  <FaArrowTrendUp
+                    size={18}
+                    className="w-[30px] h-[30px] rounded-full bg-white/90 text-black p-2"
+                  />
+                </span>{' '}
+                ADD TO BAG
+              </Link>
+            </div>
+          </div>
+          <div className="flex flex-col items-start justify-center h-full gap-y-4 w-full p-4">
+            <p className="text-lg max-w-[800px] text-left">
+              Kahico Cosmetics offers a rurious range of skincare products
+              meticulously crafted to nourish and rejuvenate your skin infused
+              with potent botanical extracts and cutting edge formulations, our
+              products deliver unparalleled hydration, radiance, and age-defying
+              benefits, inviting you to indulge in a transformative skincare
+              experience that celebrates the harmony between nature and science
+            </p>
+
+            <Link href={'/'} className=" text-black underline font-medium">
+              VIEW ALL PRODUCTS
+            </Link>
+          </div>
+        </div>
+        <div className="min-h-full flex flex-col w-[30%] border-r border-black/50">
+          <div className="flex flex-col items-center gap-y-4 w-full border-b border-black/50 p-4">
+            <Image
+              src={medicineMiniOne}
+              alt="medicine"
+              className="max-w-[250px] w-full"
+            />
+            <p className="text-lg max-w-[800px]">
+              AHAVA MINERAL BOTANIC VELVET BODY LOTION
+            </p>
+            <div className="rounded-full p-[2px] border border-black/50 scale-[0.7] text-center">
+              {' '}
+              <Link
+                href={'/'}
+                className="flex justify-center items-center bg-black text-white gap-x-4 py-3 px-6 rounded-full"
+              >
+                <span className="rounded-full p-[2px] border border-white/50">
+                  <FaArrowTrendUp
+                    size={18}
+                    className="w-[30px] h-[30px] rounded-full bg-white/90 text-black p-2"
+                  />
+                </span>{' '}
+                ADD TO BAG
+              </Link>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-y-4 w-full p-4">
+            <Image
+              src={medicineLongOne}
+              alt="medicine"
+              className="max-w-[400px] w-full"
+            />
+            <p className="text-lg max-w-[800px]">
+              AHAVA MINERAL BOTANIC VELVET BODY LOTION
+            </p>
+            <div className="rounded-full p-[2px] border border-black/50 scale-[0.7] text-center">
+              {' '}
+              <Link
+                href={'/'}
+                className="flex justify-center items-center bg-black text-white gap-x-4 py-3 px-6 rounded-full"
+              >
+                <span className="rounded-full p-[2px] border border-white/50">
+                  <FaArrowTrendUp
+                    size={18}
+                    className="w-[30px] h-[30px] rounded-full bg-white/90 text-black p-2"
+                  />
+                </span>{' '}
+                ADD TO BAG
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="min-h-full flex flex-col w-[30%] border-r border-black/50">
+          <div className="flex flex-col items-center gap-y-4 w-full border-b border-black/50 p-4">
+            <Image
+              src={medicineLongTwo}
+              alt="medicine"
+              className="max-w-[400px] w-full"
+            />
+            <p className="text-lg max-w-[800px]">
+              AHAVA MINERAL BOTANIC VELVET BODY LOTION
+            </p>
+            <div className="rounded-full p-[2px] border border-black/50 scale-[0.7] text-center">
+              {' '}
+              <Link
+                href={'/'}
+                className="flex justify-center items-center bg-black text-white gap-x-4 py-3 px-6 rounded-full"
+              >
+                <span className="rounded-full p-[2px] border border-white/50">
+                  <FaArrowTrendUp
+                    size={18}
+                    className="w-[30px] h-[30px] rounded-full bg-white/90 text-black p-2"
+                  />
+                </span>{' '}
+                ADD TO BAG
+              </Link>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-y-4 w-full p-4">
+            <Image
+              src={medicineOne}
+              alt="medicine"
+              className="max-w-[250px] w-full"
+            />
+            <p className="text-lg max-w-[800px]">
+              AHAVA MINERAL BOTANIC VELVET BODY LOTION
+            </p>
+            <div className="rounded-full p-[2px] border border-black/50 scale-[0.7] text-center">
+              {' '}
+              <Link
+                href={'/'}
+                className="flex justify-center items-center bg-black text-white gap-x-4 py-3 px-6 rounded-full"
+              >
+                <span className="rounded-full p-[2px] border border-white/50">
+                  <FaArrowTrendUp
+                    size={18}
+                    className="w-[30px] h-[30px] rounded-full bg-white/90 text-black p-2"
+                  />
+                </span>{' '}
+                ADD TO BAG
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -110,7 +110,12 @@ export default function RootLayout({
                 </Link>
               ))}
             </div>
-            <div className="flex justify-center items-center gap-y-4 h-full">
+            <div className="img-container flex justify-center items-center gap-y-4 h-full relative cursor-pointer">
+              <div className="overlay w-full h-full absolute bg-span/50 flex justify-center items-center opacity-0">
+                <h1 className="text-5xl">
+                  KAHICO <span className="block text-base">Cosmotics</span>
+                </h1>
+              </div>
               <Image src={ladyOne} alt="lady face" className="w-full" />
             </div>
           </section>

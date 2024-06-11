@@ -19,3 +19,9 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+.img-container:hover .overlay {
+  opacity: 1;
+}
+.overlay {
+  transition: all 0.4s ease-in-out;
+}
