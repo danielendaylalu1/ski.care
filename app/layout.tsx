@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const scrollText = ['s', 'c', 'r', 'o', 'l', 'l', '-', 'd', 'o', 'w', 'n'];
-  const skinImages = [skinOne, skinTwo, skinThree];
+  const skinImages = [skinOne, skinTwo, skinThree, skinTwo, skinThree, skinTwo];
   const navItems = [
     { title: 'Home', link: '/' },
     { title: 'Shop', link: '/' },
@@ -58,9 +58,9 @@ export default function RootLayout({
       <body className={`${josefin_Sans.className} bg-primary`}>
         <header className="flex w-full">
           <section className="flex flex-col p-4 gap-y-8 border-r border-b border-black/50 w-[14%] min-w-[220px]">
-            <h1 className="text-3xl">
-              KAHICO <span className="block text-sm">Cosmotics</span>
-            </h1>
+            <Link href={'/'} className="text-3xl">
+              KAHICO <span className="block text-base">Cosmotics</span>
+            </Link>
             <div className="flex gap-x-4 items-center justify-between h-full">
               <div className="flex gap-3 flex-col items-center">
                 <div className="h-[60px] border-l border-black/50"></div>
@@ -73,7 +73,7 @@ export default function RootLayout({
                 </p>
                 <div className="h-[60px] border-l border-black/50"></div>
               </div>
-              <div className="flex flex-col justify-between gap-y-6">
+              <div className="hide-scrollbar rounded-t-full flex flex-col justify-between gap-y-6 max-h-[54vh] h-full overflow-y-scroll">
                 {skinImages.map((img, i) => (
                   <Image
                     key={i}
@@ -95,7 +95,7 @@ export default function RootLayout({
 
               <CiSearch size={22} className="cursor-pointer" />
             </div>
-            <div className="flex justify-center items-center gap-y-4 py-4 px-8">
+            <div className="flex justify-center items-center gap-y-4 py-4 px-8 h-full">
               <h1 className="header-title text-[6.5rem]">
                 Take <span className="text-span block">Care</span> Of Your{' '}
                 <span className="text-span">Skin</span> Routine
@@ -110,12 +110,12 @@ export default function RootLayout({
                 </Link>
               ))}
             </div>
-            <div className="flex justify-center items-center gap-y-4">
+            <div className="flex justify-center items-center gap-y-4 h-full">
               <Image src={ladyOne} alt="lady face" className="w-full" />
             </div>
           </section>
         </header>
-        <section className="flex justify-between w-full p-4 border-b border-black/50">
+        <section className="flex items-center justify-between w-full p-4 border-b border-black/50">
           <h2>SOCIAL MEDIA</h2>
           <div className="flex items-center gap-x-8">
             {socialLinks.map((item) => (

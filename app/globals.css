@@ -7,10 +7,15 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-.scroll {
-  transform: rotate(270deg);
-}
+
 .header-title {
-  /* letter-spacing: 20px; */
   line-height: 1.25;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
