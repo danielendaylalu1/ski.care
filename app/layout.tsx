@@ -35,7 +35,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const scrollText = ['s', 'c', 'r', 'o', 'l', 'l', '-', 'd', 'o', 'w', 'n'];
   const skinImages = [skinOne, skinTwo, skinThree, skinTwo, skinThree, skinTwo];
   const navItems = [
     { title: 'Home', link: '/' },
@@ -64,13 +63,7 @@ export default function RootLayout({
             <div className="flex gap-x-4 items-center justify-between h-full">
               <div className="flex gap-3 flex-col items-center">
                 <div className="h-[60px] border-l border-black/50"></div>
-                <p className="text-sm flex flex-col">
-                  {scrollText.reverse().map((l, i) => (
-                    <span key={i} className="rotate-[270deg] -mt-2">
-                      {l}
-                    </span>
-                  ))}
-                </p>
+                <p className="VER-TEXT text-sm">Scroll - Down</p>
                 <div className="h-[60px] border-l border-black/50"></div>
               </div>
               <div className="hide-scrollbar rounded-t-full flex flex-col justify-between gap-y-6 max-h-[54vh] h-full overflow-y-scroll">

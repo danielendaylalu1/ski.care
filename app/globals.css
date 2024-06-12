@@ -25,3 +25,7 @@
 .overlay {
   transition: all 0.4s ease-in-out;
 }
+.VER-TEXT {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}

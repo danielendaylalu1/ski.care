@@ -9,12 +9,13 @@ import { PiKeyReturnFill } from 'react-icons/pi';
 import { BiSupport } from 'react-icons/bi';
 
 import ladyOne from '../assets/images/lady1.webp';
+import testimonialOne from '../assets/images/testimonial1.jpg';
 import medicineTwo from '../assets/images/medicine2.webp';
 
 import medicineLongOne from '../assets/images/medicinelong1.webp';
 import medicineLongTwo from '../assets/images/medicinelong2.png';
 import medicineMiniOne from '../assets/images/medicinemini1.png';
-import medicineMiniTwo from '../assets/images/medicinemini2.png';
+import ladyThree from '../assets/images/lady3.jpg';
 
 export default function Home() {
   const brandLinks = [
@@ -52,32 +53,14 @@ export default function Home() {
     'GET DISCOUNT UP 25 %',
     'GET DISCOUNT UP 25 %',
   ];
-  const sideText = [
-    'A',
-    '-',
-    'S',
-    'u',
-    'p',
-    'e',
-    'r',
-    'l',
-    'a',
-    't',
-    'i',
-    'v',
-    'e',
-    '-',
-    'S',
-    'e',
-    'l',
-    'c',
-    't',
-    'i',
-    'o',
-    'n',
+  const aboutUs = [
+    'WE USE A NEW APPROACH TO THE INGREDNTES',
+    'CLAIM NEW SAMPLES AND FREE SHIPPING',
+    'WE USE A NEW APPROACH TO THE INGREDNTES',
+    'CLAIM NEW SAMPLES AND FREE SHIPPING',
   ];
   return (
-    <main className="min-h-[90vh] flex justify-between items-center flex-col py-6 text-center">
+    <main className="min-h-[90vh] flex justify-between items-center flex-col text-center">
       <section className="w-full flex justify-between items-center flex-col gap-y-8 p-6">
         <h1 className="text-[4rem] max-w-[800px]">
           Parsley Seed Anti-Oxidant Intense Serum
@@ -181,13 +164,7 @@ export default function Home() {
       </section>
       <section className="min-h-[90vh] flex w-full border-b border-black/50">
         <div className="min-h-[90vh] flex w-[10%] justify-center min-w-[140px] border-r border-black/50">
-          <p className="text-5xl flex flex-col justify-center">
-            {sideText.reverse().map((l, i) => (
-              <span key={i} className="rotate-[270deg] -mt-5">
-                {l}
-              </span>
-            ))}
-          </p>
+          <p className="VER-TEXT text-5xl">A - Superlative - Selection</p>
         </div>
         <div className="min-h-full flex flex-col w-[30%] border-r border-black/50">
           <div className="flex flex-col items-center gap-y-4 w-full border-b border-black/50 p-4">
@@ -282,7 +259,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="min-h-full flex flex-col w-[30%] border-r border-black/50">
+        <div className="min-h-full flex flex-col w-[30%] ">
           <div className="flex flex-col items-center gap-y-4 w-full border-b border-black/50 p-4">
             <Image
               src={medicineLongTwo}
@@ -332,6 +309,72 @@ export default function Home() {
                 ADD TO BAG
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="min-h-[90vh] flex w-full gap-x-8 p-6">
+        <div className="w-[30%] min-w-[450px] flex justify-center items-center">
+          <Image src={ladyThree} alt="lady" className="w-[80%] min-w-[430px]" />
+        </div>
+        <div className="flex flex-col items-center justify-center w-[70%]">
+          <div className="flex flex-col items-center justify-center gap-y-12 max-w-[800px]">
+            <h1 className="text-[4rem] max-w-[800px] text-right">
+              Becouse You Deserve To{' '}
+              <span className="min-w-[140px] inline-block border-b mb-5  border-black/70"></span>{' '}
+              Feel Beautiful
+            </h1>
+
+            <p className="text-lg max-w-[800px] text-right">
+              Encapsulates a philosophy of skincare that harnesses the natural
+              power of botanical ingredients to nourish and enhance skin health,
+              promoting a holistic approach to beauty rooted in the gifts of the
+              earth.
+            </p>
+            <div className="rounded-full p-[2px] border border-black/50 scale-[0.9] text-center self-end">
+              {' '}
+              <Link
+                href={'/'}
+                className="flex justify-center items-center bg-black text-white gap-x-4 py-3 px-6 rounded-full"
+              >
+                <span className="rounded-full p-[2px] border border-white/50">
+                  <FaArrowTrendUp
+                    size={18}
+                    className="w-[30px] h-[30px] rounded-full bg-white/90 text-black p-2"
+                  />
+                </span>{' '}
+                SHOP NOW
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="flex items-center justify-around w-full gap-x-4 p-6 border-y border-black/50">
+        {aboutUs.map((item, i) => (
+          <p key={i}>{item}</p>
+        ))}
+      </section>
+      <section className="min-h-[60vh] flex w-full border-b border-black/50">
+        <div className="min-h-[60vh] flex w-[10%] justify-center items-center min-w-[140px] border-r border-black/50">
+          <p className="VER-TEXT text-5xl">CUSTOMERS - REVIEWS</p>
+        </div>
+        <div className="w-[90%] flex flex-col items-center px-6">
+          <div className="min-h-[200px] border-l border-black/70"></div>
+          <Image
+            className="w-[120px] bg-span h-[120px] rounded-full"
+            src={ladyOne}
+            alt="lady"
+          />
+          <div className="p-8 flex flex-col gap-y-8 justify-between items-center border border-black/70 mt-12">
+            <p className="text-lg max-w-[800px]">
+              {`I recently tried Kahico Cosmetics' revitalizing skincare product,
+              and I must say, it's been a game-changer for my skin. The
+              lightweight formula absorbs quickly, leaving my skin feeling
+              deeply hydrated without any greasy residue. After just a few weeks
+              of consistent use, I noticed a significant improvement in the
+              overall texture and radiance of my complexion.`}
+            </p>
+            <p className="text-lg">⭐️ ⭐️ ⭐️ ⭐️ ⭐️</p>
+            <p className="text-lg max-w-[800px] font-bold">Mike Torello</p>
           </div>
         </div>
       </section>
