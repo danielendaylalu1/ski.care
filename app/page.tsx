@@ -9,8 +9,10 @@ import { PiKeyReturnFill } from 'react-icons/pi';
 import { BiSupport } from 'react-icons/bi';
 
 import ladyOne from '../assets/images/lady1.webp';
-import testimonialOne from '../assets/images/testimonial1.jpg';
+import ladyFour from '../assets/images/lady3.webp';
+import ladyFive from '../assets/images/lady4.webp';
 import medicineTwo from '../assets/images/medicine2.webp';
+import cosmoticsOne from '../assets/images/cosmotics1.webp';
 
 import medicineLongOne from '../assets/images/medicinelong1.webp';
 import medicineLongTwo from '../assets/images/medicinelong2.png';
@@ -59,6 +61,12 @@ export default function Home() {
     'WE USE A NEW APPROACH TO THE INGREDNTES',
     'CLAIM NEW SAMPLES AND FREE SHIPPING',
   ];
+  const adressLinks = [
+    { title: 'CALIFORNIA US', link: '/' },
+    { title: 'exampe@gmail.com', link: '/' },
+    { title: '011125899', link: '/' },
+  ];
+  const imageLinks = [ladyOne, ladyThree, ladyFour, ladyFive];
   return (
     <main className="min-h-[90vh] flex justify-between items-center flex-col text-center">
       <section className="w-full flex justify-between items-center flex-col gap-y-8 p-6">
@@ -357,7 +365,7 @@ export default function Home() {
         <div className="min-h-[60vh] flex w-[10%] justify-center items-center min-w-[140px] border-r border-black/50">
           <p className="VER-TEXT text-5xl">CUSTOMERS - REVIEWS</p>
         </div>
-        <div className="w-[90%] flex flex-col items-center px-6">
+        <div className="w-[90%] flex flex-col items-center px-6 pb-5">
           <div className="min-h-[200px] border-l border-black/70"></div>
           <Image
             className="w-[120px] bg-span h-[120px] rounded-full"
@@ -377,6 +385,99 @@ export default function Home() {
             <p className="text-lg max-w-[800px] font-bold">Mike Torello</p>
           </div>
         </div>
+      </section>
+      <section className="w-full flex justify-between items-center flex-col gap-y-8 p-6">
+        <h1 className="text-[5rem] max-w-[800px] mt-8">
+          Our News, Articles & Blogs
+        </h1>
+        <p className="text-lg max-w-[800px]">
+          With the power to educate, entertain, and connect people across the
+          globe, blogs, news, and articles continue to shape our understanding
+          of the world and fuel our curiosity for discovery.
+        </p>
+        <div className="flex flex-col gap-y-4 w-full">
+          <div className="rounded-full p-[2px] border border-black/50 scale-[.6] self-center">
+            {' '}
+            <Link
+              href={'/'}
+              className="flex justify-center items-center bg-black text-white gap-x-4 py-3 px-6 rounded-full"
+            >
+              <span className="rounded-full p-[2px] border border-white/50">
+                <FaArrowTrendUp
+                  size={18}
+                  className="w-[30px] h-[30px] rounded-full bg-white/90 text-black p-2"
+                />
+              </span>{' '}
+              ALL BLOGS
+            </Link>
+          </div>
+          <div className="flex w-full gap-x-4 justify-around">
+            <div className="relative max-w-[600px] cursor-pointer">
+              <Image src={ladyFour} alt="lady" className="w-full" />
+              <div className="blog-box p-8 flex flex-col justify-end text-left gap-y-4 w-full h-full opacity-[.2] hover:opacity-[.9] top-1/2 -translate-y-1/2  bg-white absolute left-0">
+                <p className="text-lg font-light max-w-[800px]">
+                  April 02, 2004
+                </p>
+                <p className="text-lg font-bold max-w-[800px]">
+                  Nighttime Skincare Rituals
+                </p>
+                <p className="text-lg max-w-[800px]">
+                  the transformative practice of indulging in a curated routine
+                  before bedtime, where luxurious skincare products are
+                  carefully applied to nourish, repair, and rejuvenate the skin
+                  overnight. This tagline evokes the idea of a tranqui and
+                  meditative process, inviting individuals{' '}
+                  <Link href={'/'} className="font-bold text-blue-600">
+                    ...Read More
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
+            <div className="relative max-w-[600px] cursor-pointer">
+              <Image src={ladyFive} alt="lady" className="w-full" />
+              <div className="blog-box p-8 flex flex-col justify-end text-left gap-y-4 w-full h-full opacity-[.3] hover:opacity-[.9] top-1/2 -translate-y-1/2  bg-white absolute left-0">
+                <p className="text-lg font-light max-w-[800px]">
+                  March 23, 2004
+                </p>
+                <p className="text-lg font-bold max-w-[800px]">
+                  Cosmetics With Quality
+                </p>
+                <p className="text-lg max-w-[800px]">
+                  A commitment to excellence in beauty products, emphasizing
+                  superior Ingredients, precise formulations, and meticulous
+                  craftsmanship. This tagline assures consumers of products that
+                  deliver exceptional results, reliability and a luxurious
+                  experience
+                  <Link href={'/'} className="font-bold text-blue-600">
+                    ...Read More
+                  </Link>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="flex items-center justify-between w-full p-4 border-y border-black/50">
+        <h2>CONTACT US</h2>
+        <div className="flex items-center gap-x-8">
+          {adressLinks.map((item) => (
+            <Link key={item.title} href={item.link}>
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className="hide-scrollbar flex gap-x-2 items-center justify-between w-full border-b border-black/50 overflow-x-scroll">
+        {imageLinks.map((img, indx) => (
+          <div
+            key={indx}
+            className="w-[20%] min-w-[300px] h-[300px] border-x border-black/50 p-4"
+          >
+            <Image src={img} alt="images" className="max-w-full max-h-full" />
+          </div>
+        ))}
       </section>
     </main>
   );

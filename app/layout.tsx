@@ -51,6 +51,12 @@ export default function RootLayout({
     { title: 'INSTAGRAM', link: '/' },
     { title: 'TWITTER', link: '/' },
   ];
+  const footerAboutLinks = [
+    { title: 'Our History', link: '/' },
+    { title: 'Our Products', link: '/' },
+    { title: 'Contact Us', link: '/' },
+    { title: 'Get in Touch', link: '/' },
+  ];
 
   return (
     <html lang="en">
@@ -124,7 +130,47 @@ export default function RootLayout({
           </div>
         </section>
         {children}
-        <footer></footer>
+        <footer className="py-12 px-4 flex justify-between gap-x-4 items-center">
+          <Link href={'/'} className="text-6xl">
+            KAHICO <span className="block text-base">Cosmotics</span>
+          </Link>
+          <div className="flex flex-col gap-y-4">
+            <h3 className="text-lg font-bold">ABOUT US</h3>
+            <div className="flex flex-col gap-y-3 ">
+              {footerAboutLinks.map((item) => {
+                return (
+                  <Link href={item.link} key={item.title} className="font-thin">
+                    {item.title}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-4">
+            <h3 className="text-lg font-bold">HELP</h3>
+            <div className="flex flex-col gap-y-3 ">
+              {footerAboutLinks.map((item) => {
+                return (
+                  <Link href={item.link} key={item.title} className="font-thin">
+                    {item.title}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+          <div className="flex flex-col gap-y-4">
+            <h3 className="text-lg font-bold">FIND US IN</h3>
+            <div className="flex flex-col gap-y-3 ">
+              {footerAboutLinks.map((item) => {
+                return (
+                  <Link href={item.link} key={item.title} className="font-thin">
+                    {item.title}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
